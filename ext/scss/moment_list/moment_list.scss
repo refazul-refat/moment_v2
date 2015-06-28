@@ -1,0 +1,323 @@
+@import '../base/variables.scss';
+
+@import '../base/mixins.scss';
+
+
+////////////////////////////////////
+//  Media Menu
+.menu_activate {
+    position : absolute;
+    bottom   : $menu_activate_bottom;
+    right    : $menu_activate_right;
+    left     : $menu_activate_left;
+    height   : $menu_activate_height;
+    width    : $menu_activate_width;
+}
+.menu_activate_clickRegion {
+    position : absolute;
+    bottom   : $menu_activate_clickRegion_bottom;
+    right    : $menu_activate_clickRegion_right;
+    left     : $menu_activate_clickRegion_left;
+    height   : $menu_activate_clickRegion_height;
+    width    : $menu_activate_clickRegion_width;
+    cursor   : pointer;
+    display  : none;
+    z-index  : $menu_activate_clickRegion_z_index;
+}
+
+.menu_activate_circle {
+    background-color      : $color_gray_dark; // color_black_80_transparent;
+    -webkit-border-radius : $menu_activate_circle_radius;
+    -moz-border-radius    : $menu_activate_circle_radius;
+    -o-border-radius      : $menu_activate_circle_radius;
+    border-radius         : $menu_activate_circle_radius;
+    border                : $button_generic_highlight_border_width;
+    color                 : $color_gray_light;
+    display               : none;
+    height                : $menu_activate_circle_height;
+    width                 : $menu_activate_circle_width;
+    line-height           : $menu_activate_circle_height;
+    padding               : $menu_activate_circle_padding;
+    position              : absolute;
+    bottom                : $menu_activate_circle_bottom;
+    right                 : $menu_activate_circle_right;
+    text-align            : center;
+    vertical-align        : middle;
+    z-index               : $menu_activate_circle_z_index;
+    box-sizing            : content-box;
+    @include transition(all, $transition_duration);
+    button.menu_activate_circle_bars {
+        position : static;
+    }
+    &.no_touch {
+        z-index  : $menu_activate_circle_z_index_no_touch;
+    }
+    &.touch_mode {
+        z-index  : $menu_activate_circle_z_index_touch;
+        right    : $menu_activate_circle_right;
+        bottom   : $menu_activate_circle_bottom;
+        left     : $menu_activate_circle_left;
+    }
+}
+.column_menu_inner {
+    position: relative;
+}
+
+////////////////////////////////////
+//  Media Menu Popup
+.menu_popup {
+    background-color      : $color_gray_dark;
+    top                   : $menu_popup_top;
+    display               : none;
+    left                  : $menu_popup_left;
+    padding               : $menu_popup_padding;
+    position              : absolute;
+    width                 : $menu_popup_width;
+    z-index               : $menu_popup_z_index;
+    -webkit-border-radius : $menu_popup_border_radius;
+    -moz-border-radius    : $menu_popup_border_radius;
+    border-radius         : $menu_popup_border_radius;
+    overflow              : hidden;
+    @include transition(all, $transition_duration);
+    box-shadow: 0 0 0 $button_generic_highlight_border_width $button_generic_highlight_color;
+    ul.menu_popup_items {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        li {
+            text-align : left;
+            a {
+                display          : block;
+                padding          : $menu_popup_generic_padding;
+                color            : $color_gray_light;
+                background-color : $color_gray_dark;
+                line-height      : $menu_popup_generic_line_height;
+                @include transition(all, $transition_duration);
+                &:hover {
+                    background-color : $color_white;
+                    color            : $color_gray_dark;
+                }
+                img {
+                    vertical-align   : middle;
+                    margin-right     : $menu_popup_generic_img_margin_right;
+                    display          : inline-block;
+                }
+                i.fa {
+                    @include left_right_margin(10px, 7px);
+                }
+            }
+        }
+    }
+    &.active {
+        display: block;
+    }
+
+}
+
+////////////////////////////////////
+// Buttons
+.button_close {
+    cursor                : pointer;
+    display               : block;
+    text-align            : center;
+    width                 : $button_close_diameter;
+    height                : $button_close_diameter;
+    vertical-align        : middle;
+    -webkit-border-radius : $button_close_radius;
+    -moz-border-radius    : $button_close_radius;
+    border-radius         : $button_close_radius;
+    background-color      : $color_white;
+    padding               : 0;
+    position              : absolute;
+    top                   : $button_close_top;
+    right                 : $button_close_right;
+    -webkit-transform     : rotate($button_close_rotate);
+    -moz-transform        : rotate($button_close_rotate);
+    -ms-transform         : rotate($button_close_rotate);
+    -o-transform          : rotate($button_close_rotate);
+    transform             : rotate($button_close_rotate);
+    z-index               : $button_close_z_index;
+    &::before {
+        font-size   : $button_close_font_size;
+        content     : "+";
+        color       : $color_gray_dark;
+        line-height : $button_close_line_height;
+        font-weight : bold;
+    }
+}
+
+button.menu_activate_circle_bars {
+    background : $color_transparent;
+    border     : none;
+    padding    : 0;
+    position   : absolute;
+    right      : $menu_activate_circle_bars_right;
+    top        : $menu_activate_circle_bars_top;
+    span.menu_activate_circle_bar {
+        background-color : $color_gray_dark;
+        display          : block;
+        height           : $menu_activate_circle_bar_height;
+        margin-bottom    : $menu_activate_circle_bar_margin_bottom;
+        width            : $menu_activate_circle_bar_width;
+    }
+}
+
+.page_menu_popup_list_small_screen {
+    display : none;
+}
+
+////////////////////////////////////
+// Video moment_list
+div#moment_list {
+    /* grid width, will be different for different grids */
+    /* for youtube its 100% */
+    position : absolute;
+    width    : 80%;
+    left     : 10%;
+    height   : 300px;
+    z-index  : 30;
+    bottom   : $moment_list_bottom_offset;
+    opacity  : 0;
+    @include transition(opacity, $transition_duration);
+    &:hover {
+        opacity : 1;
+    }
+    .moment_list_background {
+      position         : absolute;
+      width            : 100%;
+      height           : $moment_list_bm_height + $moment_list_vertical_padding*2;
+      background-color : $color_black_80_transparent;
+      bottom           : - $moment_list_vertical_padding;
+    }
+
+    .bm_container {
+        a {
+            text-decoration : none;
+        }
+        .bm_thumbnail {
+            position        : absolute;
+            border          : 1px solid $color_gray;
+            width           : $moment_list_bm_width;
+            height          : $moment_list_bm_height;
+            background      : url('../images/video_thumbnail_b.jpg');
+            background-size : cover;
+            bottom          : 0;
+            text-align      : left;
+            cursor          : pointer;
+            z-index         : 10;
+            &.bm_new_moment {
+                visibility      : hidden;
+                border          : 1px solid $color_green;
+                z-index: 11;
+                .bm_arrow {
+                    border-width : $moment_list_bm_arrow $moment_list_bm_arrow 0 $moment_list_bm_arrow;
+                    border-color : $color_green transparent transparent transparent;
+                }
+            }
+            .bm_arrow {
+                position     : absolute;
+                bottom       : - $moment_list_bm_arrow;
+                left         : $moment_list_bm_width/2 - $moment_list_bm_arrow;
+                width        : 0;
+                border-style : solid;
+                border-width : $moment_list_bm_arrow $moment_list_bm_arrow 0 $moment_list_bm_arrow;
+                border-color : $color_gray transparent transparent transparent;
+            }
+            h4 {
+                position    : absolute;
+                width       : 100%;
+                bottom      : 0;
+                color       : #fff;
+                line-height : $media_title_line_height;
+                font-size   : $text_font_size_normal_full;
+                padding     : $media_title_padding_along $media_title_padding_horizontal;
+                line-height : $media_title_line_height;
+                background  : $color_black_50_transparent;
+            }
+        }
+        .bm_menu {
+          position         : absolute;
+          bottom           : 0;
+          z-index          : 0;
+          visibility       : hidden;
+            .menu_save, .menu_cancel, .menu_open {
+                display: block;
+                right: $new_menu_activate_right + 20;
+                height: $new_menu_activate_circle_height;
+                width: $new_menu_activate_circle_width;
+                padding: $new_menu_activate_circle_padding;
+                color: #000;
+                cursor: pointer;
+                background-color: $color_off_gray;
+                &.roll {
+                    @include transition(all, $transition_duration);
+                    right: $new_menu_activate_right;
+                }
+                &:hover {
+                    background-color : $color_white;
+                    z-index: 20;
+                }
+            }
+            .menu_open {
+                width: 50px;
+                padding: 16px 0px 8px 0px;
+                font-size: 18px;
+                line-height: 20px;
+                height: 25px;
+            }
+            .menu_save, .menu_open {
+                top: 0;
+            } 
+            .menu_cancel {
+                bottom: 0;
+            }
+            .bm_new_moment_description {
+              position: absolute;
+              width: 130%;
+              border-radius: 5%;
+              padding: 10%;
+              font-size: 15px;
+              height: 120%;
+              right: -15%;
+              top: -110%;
+              visibility: visible;
+              background-color: $color_black;
+              color: $color_white;
+              a.description_close {
+                cursor: pointer;
+                width: 30px;
+                height: 30px;
+                background-color: $color_off_gray;
+                color: $color_black;
+                @include radius(15px);
+                text-align: center;
+                line-height: 30px;
+                float: right;
+              }
+            }
+            .menu_popup {
+                width : $moment_list_bm_width;
+                bottom : 0;
+                top    : auto;
+                .button_close_container {
+                    cursor: pointer;
+                    display          : inline-block;
+                    width            : 100%;
+                    // height should be the button close margin plus its height
+                    // because we want to make this whole area clickable.
+                    height           : $button_close_diameter + $button_close_top + $button_close_container_offset;
+                    text-align: right;
+                    padding: $button_close_container_offset $button_close_container_offset 0 0;
+                    &:hover {
+                        background-color : $color_white;
+                        color            : $color_gray_dark;
+                    }
+                    span.button_close {
+                        display: inherit;
+                        position: static;
+                    }
+                }
+            }
+        }
+    }
+}

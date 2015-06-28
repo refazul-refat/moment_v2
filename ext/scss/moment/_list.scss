@@ -1,0 +1,239 @@
+// __momentlist_all_format__
+#moment_list{
+	position: absolute;
+	left: 10%;
+   opacity: 1;
+}
+.host #moment_list{
+	height: 81px;
+	bottom: 39px;
+}
+#moment_list .moment{
+	margin: 0px;
+	z-index: 1000;
+	width: 128px;
+}
+.no-touch .touch{
+	display: none;
+}
+// __momentlist_touch_format__
+#moment_list .control{
+	position: absolute;
+	z-index: 1001;
+	height: 100%;
+	width: 55px;
+	top: 10px;
+}
+#moment_list .left{
+	left:0px;
+}
+#moment_list .right{
+	right:0px;
+}
+.touch #moment_list{
+	position: absolute;
+	width: 100%;
+	height: 81px;
+}
+.touch #moment_list .moment{
+	width: 128px;
+	margin-right: 40px;
+}
+.touch #moment_list .items{
+	overflow-x: scroll;
+	white-space: nowrap;
+	margin: auto;
+	width: 64%;
+}
+.jssora03l, .jssora03r {
+	display: block;
+	position: relative;
+	/* size of arrow element */
+	width: 55px;
+	height: 55px;
+	cursor: pointer;
+	background: url(../images/a03.png) no-repeat;
+	overflow: hidden;
+	margin: auto;
+}
+.jssora03l { background-position: -3px -33px; }
+.jssora03r { background-position: -63px -33px; }
+.jssora03l:hover { background-position: -123px -33px; }
+.jssora03r:hover { background-position: -183px -33px; }
+.jssora03l.jssora03ldn { background-position: -243px -33px; }
+.jssora03r.jssora03rdn { background-position: -303px -33px; }
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+	.touch #moment_list .items{
+
+	}
+	.touch #moment_list .moment{
+
+	}
+}
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+	.touch #moment_list .items{
+
+	}
+	.touch #moment_list .moment{
+
+	}
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+	.touch #moment_list .items{
+
+	}
+	.touch #moment_list .moment{
+
+	}
+}
+
+/* ----------- iPhone 5 and 5S ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+	.touch #moment_list .items{
+
+	}
+	.touch #moment_list .moment{
+		width: 128px;
+		margin-right: 40px;
+	}
+}
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+	.touch #moment_list .items{
+		width: 50%;
+	}
+	.touch #moment_list .moment{
+		width: 128px;
+		margin-right: 40px;
+	}
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+	.touch #moment_list .items{
+		width: 64%;
+	}
+	.touch #moment_list .moment{
+		width: 128px;
+		margin-right: 40px;
+	}
+}
+
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+	.touch #moment_list .items{
+
+	}
+	.touch #moment_list .moment{
+
+	}
+}
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+	.touch #moment_list .items{
+
+	}
+	.touch #moment_list .moment{
+
+	}
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+	.touch #moment_list .items{
+
+	}
+	.touch #moment_list .moment{
+
+	}
+}
+
+/* ----------- iPhone 6+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3) {
+	.touch #moment_list .items{
+
+	}
+	.touch #moment_list .moment{
+
+	}
+}
+
+/* Portrait */
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+	.touch #moment_list .items{
+
+	}
+	.touch #moment_list .moment{
+
+	}
+}
+
+/* Landscape */
+@media only screen
+  and (min-device-width: 414px)
+  and (max-device-width: 736px)
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) {
+	.touch #moment_list .items{
+
+	}
+	.touch #moment_list .moment{
+
+	}
+}

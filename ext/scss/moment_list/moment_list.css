@@ -1,0 +1,288 @@
+.menu_activate {
+  position: absolute;
+  bottom: 26px;
+  right: -38px;
+  left: auto;
+  height: calc(100% - 26px);
+  width: 100%; }
+
+.menu_activate_clickRegion {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: auto;
+  height: 100%;
+  width: 60px;
+  cursor: pointer;
+  display: none;
+  z-index: 11; }
+
+.menu_activate_circle {
+  background-color: #555;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  border: 2px;
+  color: #ccc;
+  display: none;
+  height: 16px;
+  width: 50px;
+  line-height: 16px;
+  padding: 20px 0px 14px 0px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  text-align: center;
+  vertical-align: middle;
+  z-index: 2;
+  box-sizing: content-box;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -ms-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in; }
+  .menu_activate_circle button.menu_activate_circle_bars {
+    position: static; }
+  .menu_activate_circle.no_touch {
+    z-index: 11; }
+  .menu_activate_circle.touch_mode {
+    z-index: 2;
+    right: 0px;
+    bottom: 0px;
+    left: auto; }
+
+.column_menu_inner {
+  position: relative; }
+
+.menu_popup {
+  background-color: #555;
+  top: 0%;
+  display: none;
+  left: 0;
+  padding: 0px p 0px 0;
+  position: absolute;
+  width: 100%;
+  z-index: 20;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -ms-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
+  box-shadow: 0 0 0 2px #fff; }
+  .menu_popup ul.menu_popup_items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; }
+    .menu_popup ul.menu_popup_items li {
+      text-align: left; }
+      .menu_popup ul.menu_popup_items li a {
+        display: block;
+        padding: 3px 0;
+        color: #ccc;
+        background-color: #555;
+        line-height: 34px;
+        -webkit-transition: all 0.1s ease-in;
+        -moz-transition: all 0.1s ease-in;
+        -ms-transition: all 0.1s ease-in;
+        -o-transition: all 0.1s ease-in;
+        transition: all 0.1s ease-in; }
+        .menu_popup ul.menu_popup_items li a:hover {
+          background-color: #fff;
+          color: #555; }
+        .menu_popup ul.menu_popup_items li a img {
+          vertical-align: middle;
+          margin-right: 10px;
+          display: inline-block; }
+        .menu_popup ul.menu_popup_items li a i.fa {
+          margin: 0 7px 0 10px; }
+  .menu_popup.active {
+    display: block; }
+
+.button_close {
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 0;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  z-index: 19; }
+  .button_close::before {
+    font-size: 40px;
+    content: "+";
+    color: #555;
+    line-height: 20px;
+    font-weight: bold; }
+
+button.menu_activate_circle_bars {
+  background: transparent;
+  border: none;
+  padding: 0;
+  position: absolute;
+  right: 22%;
+  top: 38%; }
+  button.menu_activate_circle_bars span.menu_activate_circle_bar {
+    background-color: #555;
+    display: block;
+    height: 2px;
+    margin-bottom: 3px;
+    width: 17px; }
+
+.page_menu_popup_list_small_screen {
+  display: none; }
+
+div#moment_list {
+  /* grid width, will be different for different grids */
+  /* for youtube its 100% */
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  height: 300px;
+  z-index: 30;
+  bottom: 60px;
+  opacity: 0;
+  -webkit-transition: opacity 0.1s ease-in;
+  -moz-transition: opacity 0.1s ease-in;
+  -ms-transition: opacity 0.1s ease-in;
+  -o-transition: opacity 0.1s ease-in;
+  transition: opacity 0.1s ease-in; }
+  div#moment_list:hover {
+    opacity: 1; }
+  div#moment_list .moment_list_background {
+    position: absolute;
+    width: 100%;
+    height: 110px;
+    background-color: rgba(0, 0, 0, 0.2);
+    bottom: -10px; }
+  div#moment_list .bm_container a {
+    text-decoration: none; }
+  div#moment_list .bm_container .bm_thumbnail {
+    position: absolute;
+    border: 1px solid #999;
+    width: 170px;
+    height: 90px;
+    background: url("../images/video_thumbnail_b.jpg");
+    background-size: cover;
+    bottom: 0;
+    text-align: left;
+    cursor: pointer;
+    z-index: 10; }
+    div#moment_list .bm_container .bm_thumbnail.bm_new_moment {
+      visibility: hidden;
+      border: 1px solid #38761D;
+      z-index: 11; }
+      div#moment_list .bm_container .bm_thumbnail.bm_new_moment .bm_arrow {
+        border-width: 10px 10px 0 10px;
+        border-color: #38761D transparent transparent transparent; }
+    div#moment_list .bm_container .bm_thumbnail .bm_arrow {
+      position: absolute;
+      bottom: -10px;
+      left: 75px;
+      width: 0;
+      border-style: solid;
+      border-width: 10px 10px 0 10px;
+      border-color: #999 transparent transparent transparent; }
+    div#moment_list .bm_container .bm_thumbnail h4 {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      color: #fff;
+      line-height: 1.1;
+      font-size: 17px;
+      padding: 2% 5%;
+      line-height: 1.1;
+      background: rgba(0, 0, 0, 0.5); }
+  div#moment_list .bm_container .bm_menu {
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+    visibility: hidden; }
+    div#moment_list .bm_container .bm_menu .menu_save, div#moment_list .bm_container .bm_menu .menu_cancel, div#moment_list .bm_container .bm_menu .menu_open {
+      display: block;
+      right: -15px;
+      height: 22px;
+      width: 42px;
+      padding: 13px 0px 5px 0px;
+      color: #000;
+      cursor: pointer;
+      background-color: #ccc; }
+      div#moment_list .bm_container .bm_menu .menu_save.roll, div#moment_list .bm_container .bm_menu .menu_cancel.roll, div#moment_list .bm_container .bm_menu .menu_open.roll {
+        -webkit-transition: all 0.1s ease-in;
+        -moz-transition: all 0.1s ease-in;
+        -ms-transition: all 0.1s ease-in;
+        -o-transition: all 0.1s ease-in;
+        transition: all 0.1s ease-in;
+        right: -35px; }
+      div#moment_list .bm_container .bm_menu .menu_save:hover, div#moment_list .bm_container .bm_menu .menu_cancel:hover, div#moment_list .bm_container .bm_menu .menu_open:hover {
+        background-color: #fff;
+        z-index: 20; }
+    div#moment_list .bm_container .bm_menu .menu_open {
+      width: 50px;
+      padding: 16px 0px 8px 0px;
+      font-size: 18px;
+      line-height: 20px;
+      height: 25px; }
+    div#moment_list .bm_container .bm_menu .menu_save, div#moment_list .bm_container .bm_menu .menu_open {
+      top: 0; }
+    div#moment_list .bm_container .bm_menu .menu_cancel {
+      bottom: 0; }
+    div#moment_list .bm_container .bm_menu .bm_new_moment_description {
+      position: absolute;
+      width: 130%;
+      border-radius: 5%;
+      padding: 10%;
+      font-size: 15px;
+      height: 120%;
+      right: -15%;
+      top: -110%;
+      visibility: visible;
+      background-color: #000;
+      color: #fff; }
+      div#moment_list .bm_container .bm_menu .bm_new_moment_description a.description_close {
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        background-color: #ccc;
+        color: #000;
+        -moz-border-radius: 15px;
+        -webkit-border-radius: 15px;
+        border-radius: 15px;
+        text-align: center;
+        line-height: 30px;
+        float: right; }
+    div#moment_list .bm_container .bm_menu .menu_popup {
+      width: 170px;
+      bottom: 0;
+      top: auto; }
+      div#moment_list .bm_container .bm_menu .menu_popup .button_close_container {
+        cursor: pointer;
+        display: inline-block;
+        width: 100%;
+        height: 39px;
+        text-align: right;
+        padding: 4px 4px 0 0; }
+        div#moment_list .bm_container .bm_menu .menu_popup .button_close_container:hover {
+          background-color: #fff;
+          color: #555; }
+        div#moment_list .bm_container .bm_menu .menu_popup .button_close_container span.button_close {
+          display: inherit;
+          position: static; }
+
+/*# sourceMappingURL=moment_list.css.map */

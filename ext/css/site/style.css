@@ -1,0 +1,75 @@
+body{
+	font-family: 'Helvetica Neue', 'Lucida Grande', sans-serif;
+	margin:0px;
+}
+a{
+	text-decoration: none;
+	color: #4E71BB;
+}
+a:hover{
+	color: #8597BD;
+}
+button.menu{
+	width: 100%;
+}
+.moment_container{
+	position: relative;
+}
+.moment_button.twitch{
+	left: 55%;
+	position: relative;
+	font-size: 12px;
+	padding: 1px 2px;
+}
+.button{
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 400ms;
+}
+.button:hover{
+	background-color: aliceblue;
+}
+.playlist{
+	border:1px dotted #ccc;
+	transition: all 400ms;
+}
+.playlist:hover{
+	background-color: aliceblue;
+	cursor: pointer;
+}
+.playlist .remove{
+	float:right;
+	padding: 0px 3px;
+	border-left: 1px dotted #ccc;
+	cursor: pointer;
+	transition: all 400ms;
+}
+.playlist .remove:hover{
+	background: #333;
+	color: #fff;
+}
+#cancel{
+	display:block;
+}
+.next-thumbnail{
+	position: fixed;
+	right: 12%;
+	bottom: 50px;
+	cursor: pointer;
+	background-color: #aaa;
+	width: 100px;
+	height: 100px;
+}
+.p-container{
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	z-index: 5;
+}
+object,iframe{
+	margin-left: 10%;
+}

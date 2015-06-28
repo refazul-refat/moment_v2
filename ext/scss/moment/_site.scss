@@ -1,0 +1,11 @@
+.p-container{
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	z-index: 1000;
+}
+.p-container object,iframe{
+	margin-left: 10%;
+}

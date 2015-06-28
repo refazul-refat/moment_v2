@@ -1,0 +1,50 @@
+<!-- __site_comp_panel_feed_template__  -->
+<div id='feed' class='frame'>
+</div>
+<!-- __site_comp_panel_history_template__  -->
+<div id='history' class='frame'>
+</div>
+<!-- __site_comp_panel_playlists_template__  -->
+<div id='playlists' class='frame'>
+</div>
+<!-- __site_comp_panel_register_template__ -->
+<div id='register' class='frame'>
+	<div id='registration-form' style='width:338px;margin:auto;'>
+		<div class='input-group' style='margin-top:10px;'>
+			<span class='input-group-addon'>User</span>
+			<input type='text' class='form-control' value='' autocomplete='off' name='name'/>
+		</div>
+		<div class='input-group' style='margin-top:10px;'>
+			<span class='input-group-addon'>Email</span>
+			<input type='text' class='form-control' value='' autocomplete='off' name='email'/>
+		</div>
+		<div class='input-group' style='margin-top:10px;'>
+			<span class='input-group-addon'>Password</span>
+			<input type='password' class='form-control' value='' autocomplete='off' name='password'/>
+		</div>
+		<button class='btn btn-success pull-right' style='margin-top:10px;' type='submit' onclick='User.register()'>Register</button>
+
+		<div class='btn-group' style='margin-top:10px;'>
+			<a class='btn btn-facebook' target='_blank' href='https://www.facebook.com/dialog/oauth?app_id=946381225384146&redirect_uri=http://dev.mpulsemedia.com/web/facebook/&scope=email,user_friends,public_profile'>Sign up using Facebook</a>
+			<a class='btn btn-google' target='_blank' href='https://accounts.google.com/o/oauth2/auth?scope=email%20profile&state=moment&redirect_uri=http%3A%2F%2Fdev.mpulsemedia.com%2Fweb%2Fgoogle%2F&response_type=code&client_id=856474361847-cveg7qql7bpnstvl48c5217usphcn76t.apps.googleusercontent.com'>Sign up using Google</a>
+		</div>
+	</div>
+</div>
+<div id='login' class='frame'>
+	<div id='login-form' style='width:328px;margin:auto;'>
+		<div class='input-group' style='margin-top:10px;'>
+			<span class='input-group-addon'>User</span>
+			<input type='text' class='form-control' value='' autocomplete='off' name='name' />
+		</div>
+		<div class='input-group' style='margin-top:10px;'>
+			<span class='input-group-addon'>Password</span>
+			<input type='password' class='form-control' value='' autocomplete='off' name='password'/>
+		</div>
+		<button class='btn btn-success pull-right' style='margin-top:10px;' type='submit' onclick='User.login()'>Login</button>
+
+		<div class='btn-group' style='margin-top:10px;'>
+			<a class='btn btn-facebook' target='_blank' href='https://www.facebook.com/dialog/oauth?app_id=946381225384146&redirect_uri=http://dev.mpulsemedia.com/web/facebook/&scope=email,user_friends,public_profile'>Sign in using Facebook</a>
+			<a class='btn btn-google' target='_blank' href='https://accounts.google.com/o/oauth2/auth?scope=email%20profile&state=moment&redirect_uri=http%3A%2F%2Fdev.mpulsemedia.com%2Fweb%2Fgoogle%2F&response_type=code&client_id=856474361847-cveg7qql7bpnstvl48c5217usphcn76t.apps.googleusercontent.com'>Sign in using Google</a>
+		</div>
+	</div>
+</div>

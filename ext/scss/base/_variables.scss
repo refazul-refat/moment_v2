@@ -1,0 +1,489 @@
+// Moment Thumbnail
+$moment_border_color: #FD2828;
+$moment_border_color_hover: #38761D;
+$moment_border_width: 2px;
+
+//Colors
+$color_off_white:#eee;
+$color_white:#fff;
+
+//Breakpoints
+/*
+///////////////////////////////////////////////////////////////////////////////
+//  Common Elements across multiple pages
+///////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////
+// Colors
+$color_white      : #fff;
+$color_off_white  : #eee;
+$color_gray_light : #ccc;
+$color_off_gray   : #ccc;
+$color_gray       : #999;
+$color_gray_dark  : #555;
+$color_black      : #000;
+$color_green      : #38761D;
+$color_blue		  : #3399FF;
+$color_black_20_transparent : rgba(0, 0, 0, 0.80);
+$color_black_50_transparent : rgba(0, 0, 0, 0.50);
+$color_black_80_transparent : rgba(0, 0, 0, 0.20);
+$color_transparent          : transparent;
+
+////////////////////////////////////
+// Transition Speed
+$transition_duration          : 0.1s;
+
+////////////////////////////////////
+// Screen Width Breakpoints
+$screen_breakpoint_max_width  : 1060px;
+$screen_breakpoint_tablet     : 800px;
+$screen_breakpoint_mobile     : 670px;
+$screen_breakpoint_small      : 480px;
+
+////////////////////////////////////
+// Header, Sub-header, Footer
+$padding_vertical_default     : 20px;
+$header_column_5_right        : 0px;
+$header_column_5_inner_width  : 90%;
+$content_column_margin_bottom : 15px;
+
+////////////////////////////////////
+// Logo
+$text_font_family_branding    : 'syncopateregular';
+$logo_border_radius           : 10px;
+$logo_border_width            : 2px;
+
+////////////////////////////////////
+//  Generic Text
+$text_font_family_default     : Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+$text_font_size_big_full      : 28px;
+$text_font_size_big_tablet    : 25px;
+$text_font_size_big_mobile    : 22px;
+$text_font_size_big_small     : 18px;
+
+$text_font_size_normal_full   : 17px;
+$text_font_size_normal_tablet : 16px;
+$text_font_size_normal_mobile : 15px;
+$text_font_size_normal_small  : 13px;
+
+$text_font_size_small_full    : 15px;
+$text_font_size_small_tablet  : 14px;
+$text_font_size_small_mobile  : 13px;
+$text_font_size_small_small   : 12px;
+
+$text_line_height_normal      : 20px;
+
+////////////////////////////////////
+//  Generic Button
+$button_generic_height_full            : 40px;
+$button_generic_border_radius          : 5px;
+$button_generic_border_style           : solid;
+$button_generic_highlight_border_width : 2px;
+$button_generic_highlight_color        : $color_white;
+
+$button_login_content          : "Log In";
+$button_reorder_content        : "Reorder";
+$button_history_content        : "My History";
+$button_history_content_small  : "Hist";
+$button_pl_content       : "My Playlists";
+$button_pl_content_small : "Play";
+$button_pl_new_content   : "New Playlist";
+$button_your_profile_content   : "Your Profile";
+$button_follow_content         : "Follow";
+$button_following_content      : "Following 10";
+$button_publish_content        : "Publish";
+$button_save_private_content   : "Save Private";
+$button_explore_content        : "Explore Video";
+$page_menu_content             : "Menu";
+
+////////////////////////////////////
+// Back Button
+$button_back_margin_left             : 20px;
+$button_back_after_left              : - (2 * $button_back_margin_left);
+$button_back_width_profile_pict      : calc(100% - 20px - 40px - 15px); // Danh, are any of these number variables defined elsewhere? Because in calc() we cann't put variable
+$button_back_width_profile_pict_none : calc(100% - 20px); // Danh, are any of these number variables defined elsewhere? Because in calc() we cann't put variable
+$button_back_z_index             	 : 10;
+
+$button_back_highlight_margin_left             : 22px;
+$button_back_highlight_after_left              : - (2 * $button_back_highlight_margin_left);
+$button_back_highlight_width_profile_pict      : calc(100% - 17px - 40px - 15px); // Danh, are any of these number variables defined elsewhere? Because in calc() we cann't put variable
+$button_back_highlight_width_profile_pict_none : calc(100% - 17px);
+$button_back_highlight_left                    : -3px;
+$button_back_highlight_top                     : -2px;
+$button_back_highlight_height                  : $button_generic_height_full + 2*$button_generic_highlight_border_width;
+$button_back_highlight_z_index                 : 9;
+// 17px : $button_back_margin_left + $button_back_highlight_left;
+
+////////////////////////////////////
+// Search
+$search_input_padding : 2%;
+
+////////////////////////////////////
+// Generic Menu Menu
+$menu_popup_generic_padding          : 3px 0;
+$menu_popup_generic_line_height      : $text_font_size_normal_full * 2;
+$menu_popup_generic_img_margin_right : 10px;
+
+////////////////////////////////////
+// Page Menu
+$page_menu_popup_padding  : $menu_popup_generic_line_height 0 0px 0;
+$page_menu_popup_z_index  : 20;
+
+$menu_activate_circle_bars_right        : 22%;
+$menu_activate_circle_bars_top          : 38%;
+$menu_activate_circle_bar_height        : 2px;
+$menu_activate_circle_bar_margin_bottom : 3px;
+$menu_activate_circle_bar_width         : 17px;
+
+////////////////////////////////////
+// Close Button
+$button_close_right        : 5px;
+$button_close_top          : 5px;
+$button_close_radius       : 50%;
+$button_close_diameter     : 30px;
+$button_close_font_size    : 40px;
+$button_close_line_height  : 20px;
+$button_close_rotate       : 45deg;
+$button_close_z_index      : 19;
+// Close Button Container (used in video_moment_list)
+$button_close_container_offset  		 : 4px;
+
+////////////////////////////////////
+// Introduction
+$introduction_col2                        : 100%*2/3;
+$introduction_padding                     : 2.5%;
+$introduction_margin_left                 : -2.5%;
+$introduction_text_line_height            : 1.3em;
+$introduction_padding                     : 10px 0;
+$introduction_margin_bottom               : 0px;
+$introduction_margin_bottom_profile_other : 0px;
+$introduction_text_padding                : 0 40px 0 0;
+
+////////////////////////////////////
+// Grid (columns and rows)
+
+$main_background_image     : url(../images/main_background.png) no-repeat center center;
+$main_background_color     : $color_black;
+
+$container_width_full      : 94%;
+$container_width_tablet    : 92%;
+
+$column_width_full         : 100%*1/5;
+$column_width_tablet       : 100%*1/4;
+$column_width_mobile       : 100%*1/3;
+$column_width_small        : 100%*1/2;
+
+$column_1and2_width_full   : 100%*2/5;
+$column_1and2_width_tablet : 100%*1/2;
+$column_1and2_width_mobile : 100%*1/3;
+$column_1and2_width_small  : 100%*1/2;
+
+$column_3and4_width_small  : 100%;
+
+$column_4and5_width_full   : 100%*2/5;
+$column_4and5_width_tablet : 100%*1/2;
+$column_4and5_width_mobile : 100%*2/3;
+$column_4and5_width_small  : 100%*1/2;
+
+//////////////////////////////////////////////////////////
+// Media, Playlists and Moments
+//////////////////////////////////////////////////////////
+
+////////////////////////////////////
+//  Media
+
+$media_width_mouse       : 90%; // Danh, why is this different?
+$media_width_mouse_1and2 : 95%;
+$media_width_mouse_3and4 : 95%;
+$media_width_mouse_4and5 : 95%; // when one column mod then it is 90% when 2 columns then it must 95%
+$media_width_touch       : 78%;
+
+$media_title_line_height               : 1.1;
+$media_title_min_height_line_multiple  : 2;
+$media_title_padding_horizontal        : 5%;
+$media_title_padding_along             : 2%;
+
+////////////////////////////////////
+//  Playlist
+$pl_border_radius           : 10px;
+$pl_view_count_line_height  : 20px;
+$pl_view_count_padding      : 3px;
+
+$moment_count_padding_full        : 2px 8px;
+$moment_count_padding_tablet      : 1px 7px;
+$moment_count_padding_mobile      : 0px 6px;
+$moment_count_position_top_right  : 0px;
+
+////////////////////////////////////
+//  Bookmark
+$bm_border_radius           : 0px;
+
+////////////////////////////////////
+//  Media Menu
+$menu_activate_width             : 100%;
+$menu_activate_height            : calc(100% - 26px);
+$menu_activate_height_small      : calc((100% - 26px)*2/3);
+$menu_activate_right             : -38px;
+$menu_activate_right_small       : -38px;
+$menu_activate_left              : auto;
+$menu_activate_bottom            : 26px;
+$menu_activate_touch_mode_right  : -33px;
+$menu_activate_touch_mode_bottom : 25px;
+
+$menu_activate_clickRegion_width       : 60px;
+$menu_activate_clickRegion_height      : 100%;
+$menu_activate_clickRegion_right       : 0;
+$menu_activate_clickRegion_left        : auto;
+$menu_activate_clickRegion_bottom      : 0;
+
+$menu_activate_circle_width            : 50px;
+$menu_activate_circle_height           : 16px;
+$menu_activate_circle_radius           : 50%;
+$menu_activate_circle_padding          : 20px 0px 14px 0px;
+$menu_activate_circle_width_small      : 42px;
+$menu_activate_circle_height_small     : 16px;
+$menu_activate_circle_padding_small    : 16px 0px 10px 0;
+$menu_activate_circle_right_small      : 0px;
+$menu_activate_circle_z_index_no_touch : 11;
+$menu_activate_circle_z_index_touch    : 2;
+$menu_activate_circle_bottom           : 0px;
+$menu_activate_circle_right            : 0px;
+$menu_activate_circle_bottom           : 0px;
+$menu_activate_circle_left             : auto;
+$media_z_index                         : 10;
+$menu_activate_clickRegion_z_index     : 11;
+$menu_activate_circle_z_index          : 2;
+
+////////////////////////////////////
+//  Media Menu Popup
+$menu_popup_left          : 0;
+$menu_popup_top           : 0%;
+$menu_popup_padding       : 0px p 0px 0; // 38px 0 10px 0;
+$menu_popup_z_index       : 20;
+$menu_popup_border_radius : 5px;
+$menu_popup_width         : 100%;
+$menu_popup_width_touch   : 115%;
+
+/////////////////////////////////////////////////////////
+//  Page-Specific Elements
+/////////////////////////////////////////////////////////
+
+
+////////////////////////////////////
+// Video Moment List
+$moment_list_bm_width   : 170px;
+$moment_list_bm_height  : 90px;
+$moment_list_bm_arrow   : 10px;
+$moment_list_vertical_padding : 10px;
+$moment_list_bottom_offset    : 60px;
+$menu_activate_circle_offset_right : 2px;
+
+////////////////////////////////////
+// Profile page
+
+// Profile Image
+$profile_icon_margin_left   : 15px;
+$profile_icon_height        : 40px;
+$profile_icon_width         : 40px;
+$profile_column5_margin_top : 20px;
+
+// Profile Switcher
+$profile_switcher_size_full  : 17px;
+$profile_switcher_size_small : 14px;
+$profile_switcher_boarder    : 2px;
+
+////////////////////////////////////
+// New Playlist page
+
+// Playlist Sequence
+$pl_sequence_border : 2px dashed $color_gray;
+$pl_sequence_instructions_color    : #222;
+$pl_sequence_instructions_height   : 100%;
+$pl_sequence_instructions_width    : 100%;
+$pl_sequence_instructions_right    : 0;
+$pl_sequence_instructions_top      : 0;
+$pl_sequence_instructions_p_height : calc(100% - 0px);
+$pl_sequence_instructions_p_width  : calc(100% - 0px);
+$pl_sequence_instructions_p_right  : 0;
+$pl_sequence_instructions_p_top    : 0;
+
+$button_left_top      : 45%;
+$button_left_left     : -15px;
+$button_left_content  : "<";
+$button_left_size     : 20px;
+$button_right_left    : auto;
+$button_right_right   : -15px;
+$button_right_content : ">";
+
+////////////////////////////////////
+// Video page
+
+$video_iframe_padding_lower     : 27px;
+$video_media_next_padding_lower : 25px;
+
+// Bottom Slider Thumbnail Code
+
+$column            : 100%/3;
+$media_media_title : 40px;
+$h1_logo           : 14px;
+
+$pl_sequence_padding: 20px;
+
+$column_margin_inner  : 0;
+$profile_body_br      : 50%;
+$profile_body_br1     : 50%;
+$profile_body_br2     : 50%;
+$profile_body_br3     : 50%;
+$profile_body_height  : 16px;
+$profile_body_width   : 50px;
+$profile_body_line    : 16px;
+$profile_body_padding : 17px;
+$profile_body_right   : -40px;
+$profile_body_bottom  : 0;
+$profile_body_index   : 2;
+$profile_margin_left  : 10px;
+$profile_h2           : 10px;
+$column_screen        : 50%;
+$media_media_title    : 40px;
+$h1_logo_fz           : 13px;
+$media_title_h5       : 13px;
+$ul_separator_li_mr           : 10px;
+$ul_separator_li_height       : 10px;
+$ul_separator_li_after_width  : 10px;
+$ul_separator_li_after_height : 10px;
+$introduction_Col1_padding   : 10px;
+$introduction_width          : 100%;
+$column_column_col1_width     : 50%;
+$pl_body_header_width   :  100%;
+$pl_body_header_margin  :  20px;
+$pl_body_col1_width     : 42.5%;
+$profile_body_sub_header      : 20px;
+$round_light_opacity_bottom   : 0;
+$round_light_opacity_right    : 1%;
+$ul_media_zindex         : 99999999;
+$ul_li_padding           : 5px;
+$ul_media_index          : 99;
+$round_light_opacity     : 100%;
+$media_text_width        : 130px;
+$media_text_height       : 110px;
+$media_text_padding1     : 20px;
+$media_text_padding2     : 10px;
+$media_text_top          : 1px;
+$media_text_right        : -120px;
+$media_text_zindex       : 999;
+$media_text_br           : 5px;
+$owl_item_height         : 190px;
+$owl_buttons_div_opacity : 1;
+$media_bottom_popup      : 999999999;
+$owl_controls_top        : 62%;
+$owl_carousel_width      : 96%;
+$media_text_span_width   : 80%;
+$media_text_span         : 20%;
+$media_text_fz           : 14px;
+$media_text_font         : 600;
+$thumbnail_slider        : 15px;
+$thumbnail_slider_media  : 83%;
+
+// Bx Slider Design
+$bx_controls_direction_controls_w : 25px;
+$bx_controls_direction_controls_h : 25px;
+$bx_wrapper_bx_viewport_width     : 94%;
+
+
+// Design for non touch devices
+$no_touch_thumbnail_slider_width                   : 100%;
+$no_touch_thumbnail_slider_bxslider_height         : 200px;
+$no_touch_thumbnail_slider_bxslider_width          : 110%;
+$no_touch_thumbnail_slider_bxslider_li_width       : 20%;
+$no_touch_thumbnail_slider_bxslider_li_space_right : 30px;
+
+// Media Device Width 479px
+$w479_no_touch_thumbnail_slider_bxslider_width                 : 110%;
+$w479_no_touch_thumbnail_slider_bxslider_li_width              : 50%;
+$w479_no_touch_thumbnail_slider_bxslider_li_space_right        : 5%;
+$w479_no_touch_thumbnail_slider_media_media_title_heading_font : 14px;
+$w479_thumbnail_slider_bx_wrapper_width                        : 82%;
+
+// Media Device Width 767px
+$w767_no_touch_thumbnail_slider_bxslider_width                 : 108%;
+$w767_no_touch_thumbnail_slider_bxslider_li_width              : 33%;
+$w767_no_touch_thumbnail_slider_bxslider_li_space_right        : 5%;
+$w767_no_touch_thumbnail_slider_media_media_title_heading_font : 14px;
+$w767_thumbnail_slider_bx_wrapper_width                        : 86%;
+
+// Media Device Width 991px
+$w991_no_touch_thumbnail_slider_bxslider_width                 : 104%;
+$w991_no_touch_thumbnail_slider_bxslider_li_width              : 25%;
+$w991_no_touch_thumbnail_slider_bxslider_li_space_right        : 3%;
+$w991_no_touch_thumbnail_slider_media_media_title_padding      : 3px;
+$w991_no_touch_thumbnail_slider_media_media_title_heading_font : 15px;
+$w991_thumbnail_slider_bx_wrapper_width                        : 91%;
+
+// Media Device Width 1199px
+$w1199_no_touch_thumbnail_slider_bxslider_width                 : 112%;
+$w1199_no_touch_thumbnail_slider_bxslider_li_width              : 20%;
+$w1199_no_touch_thumbnail_slider_bxslider_li_space_right        : 3%;
+$w1199_no_touch_thumbnail_slider_media_media_title_padding      : 3px;
+$w1199_no_touch_thumbnail_slider_media_media_title_heading_font : 15px;
+$w1199_thumbnail_slider_bx_wrapper_width                        : 91%;
+
+
+// Register
+$white_color_2                 : #fff;
+$register_div_width            : 400px;
+$register_div_margin           : 0 auto;
+$register_div_background_color : $white_color_2;
+$register_div_padding          : 5px;
+$register_title_margin         : 20px 0;
+$register_text_margin_bottom   : 1em;
+$register_input_margin         : 5px 0px;
+$register_input_padding        : 3px;
+
+$preferred_login_background    : #F9F9F9 none repeat scroll 0% 0%;
+$preferred_login_width         : 258px;
+$preferred_login_border        : 1px $button_generic_border_style #D4D4D4;
+$preferred_login_shadow        : -1px 1px #F2F2F2;
+$preferred_login_color         : #888;
+$preferred_login_padding       : 7px;
+$preferred_login_margin_bottom : 15px;
+$preferred_login_height        : 16px;
+
+$preferred_login_icon_google_background   : url("../images/google.png") no-repeat 0 0;
+$preferred_login_icon_facebook_background : url("../images/facebook.png") no-repeat 0 0;
+$preferred_login_icon_email_background    : url("../images/email.png") no-repeat 0 0;
+$preferred_login_icon_width               : 16px;
+$preferred_login_icon_height              : 16px;
+$preferred_login_icon_margin_right        : 12px;
+
+$form_bottom_input_width    : 250px;
+$form_bottom_input_border   : 1px solid #999;
+$form_submit_padding        : 10px 0px 15px;
+$submit_button_width        : auto !important;
+$submit_button_line_height  : 1;
+$submit_button_padding      : 0.6em 0.8em;
+$submit_button_background   : $color_blue none repeat scroll 0% 0%;
+$submit_button_border       : $button_generic_highlight_border_width/2 $button_generic_border_style #1777B7;
+$submit_button_box_shadow   : 0px 1px 0px rgba(255, 255, 255, 0.3) inset, 0px 1px 1px rgba(100, 100, 100, 0.3);
+$submit_button_border_radius: 3px;
+
+$message_info_z_index      : 1;
+$message_info_right        : -205px;
+$message_info_top          : 12px;
+$message_info_width        : 200px;
+$message_info_before_top   : 0px;
+$message_info_before_border: 9px;
+
+$message_info_message_text_padding       : 15px;
+$message_info_message_text_ul_margin_left: 15px;
+$message_info_message_text_ul_padding    : 0;
+$message_info_message_text_li_margin     : 0px 0px 5px;
+$message_info_message_text_li_padding    : 0;
+
+////////////////////////////////////
+// Video moment_list
+$new_menu_activate_right               : -35px;
+$new_menu_activate_circle_height       : 22px;
+$new_menu_activate_circle_width        : 42px;
+$new_menu_activate_circle_padding      : 13px 0px 5px 0px;
+*/

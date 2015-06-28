@@ -1,0 +1,18 @@
+@mixin transition($prop, $s) {
+   -webkit-transition : $prop $s ease-in;
+      -moz-transition : $prop $s ease-in;
+       -ms-transition : $prop $s ease-in;
+        -o-transition : $prop $s ease-in;
+           transition : $prop $s ease-in;
+}
+@mixin text_shadow($blur, $color_shadow) {
+	text-shadow : 0 1px $blur $color_shadow;
+}
+@mixin left_right_margin($left, $right) {
+	margin: 0 $right 0 $left;
+}
+@mixin radius($prop) {
+	-moz-border-radius: $prop;
+   -webkit-border-radius: $prop;
+   border-radius: $prop;
+}
